@@ -1,0 +1,118 @@
+/*
+ * Theme Name: Twentysixteen Child
+ * Template: twentysixteen
+ */
+
+body, button, input, select, textarea {
+    color: #444444;
+}
+
+.site {
+    background-color: hsl(300, 100%, 96%);
+}
+
+.content-area,
+.sidebar {
+    float: none;
+}
+
+.content-area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.single .author-info {
+    display: none;
+}
+.single .byline {
+    display: none;
+}
+
+.content-bottom-widgets {
+    display: flex;
+}
+
+.content-bottom-widgets .widget-area {
+    flex: 1;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.entry-title {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.featured-posts {
+    border-bottom: 4px solid rgb(26, 26, 26);
+    margin-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas:
+            "p1 p1"
+            "p1 p1"
+            "p2 p2"
+            "p3 p4";
+}
+
+@media screen and (min-width: 56.875em) {
+    .featured-posts {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 150px);
+        grid-template-areas:
+                "p1 p1 p1 p2 p2"
+                "p1 p1 p1 p2 p2"
+                "p1 p1 p1 p3 p4";
+    }
+}
+
+
+.featured-posts .post {
+    background-color: #aaaaaa;
+    display: block;
+    position: relative;
+}
+
+.featured-posts .caption {
+    padding: .5em 1em;
+    background-color: #222222;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.featured-posts h2 {
+    font-family: Montserrat, sans-serif;
+    color: #eee;
+}
+
+.featured-posts img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-1 {
+    grid-area: p1;
+}
+
+.post-2 {
+    grid-area: p2;
+    font-size: 80%;
+}
+
+.post-3 {
+    grid-area: p3;
+    font-size: 60%;
+}
+
+.post-4 {
+    grid-area: p4;
+    font-size: 60%;
+}
